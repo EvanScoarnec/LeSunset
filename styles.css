@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─
+/*─                                                                                      RESET
+/*─
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  /*─ Debug font size on iphone when landscape orientation ─*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*─ Debug safari font weight when fixed element on the page ─*/
+  -webkit-font-smoothing: antialiased;
+  /*─ idem : Debug safari font weight when fixed element on the page ─*/
+}
+
+html,
+body,
+nav,
+header,
+footer,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ul,
+li,
+table,
+form,
+label,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type='submit']:hover,
+button:hover {
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+  /*─ IE11 → remove cross to close ─*/
+}
+
+textarea {
+  overflow: auto;
+  /*─ Hide scroll bar on IE ─*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+svg,
+picture {
+  display: block;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+body {
+  background-image: url("img/HeroSection.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #471f36;
+}
+
+nav {
+  background: transparent;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 32px 14px;
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-right: 254px;
+}
+
+nav ul {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 54px;
+  font-weight: 600;
+}
+
+.hero {
+  margin: 2%;
+  margin-top: 0;
+  padding: 5% 5% 5% 7%;
+  border: 2px solid white;
+  border-radius: 18px;
+}
+
+.hero h1,
+.hero h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero .logo {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 20%;
+  left: 70%;
+  background-color: transparent;
+  border-radius: 300px;
+  border: 2px solid #471f36;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.hero .title {
+  font-weight: bolder;
+  font-size: 4rem;
+  color: #471f36;
+  display: block;
+  padding-top: 2rem;
+}
+
+.hero h2 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 3.5rem;
+  color: #ffffff;
+  display: block;
+  padding-bottom: 5%;
+}
+
+.hero .hero_form {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  position: relative;
+}
+
+.hero .hero_form::before {
+  content: '';
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 110px;
+  height: 1px;
+  background: #ffffff;
+  position: absolute;
+  left: -8.5%;
+  top: 50%;
+  z-index: 2;
+}
+
+.hero .hero_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 12px;
+  padding-top: 3rem;
+}
+
+.hero .btn_primary {
+  background-color: #ee6e5d;
+  border-radius: 1.5em;
+  display: block;
+  position: relative;
+  width: 8.5em;
+  height: 3em;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  color: #471f36;
+  font-weight: 600;
+}
+
+.hero .btn_primary:hover {
+  background-color: #f9a971;
+}
+
+.hero .btn_secondary {
+  background-color: transparent;
+  color: #fff;
+}
+
+.hero .square {
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border: 1px solid #fff;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.hero .hero_end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-top: 5rem;
+}
+
+.hero .hero_final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #471f36;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-top: 2rem;
+}
+
+.hero .fa {
+  font-size: 22px;
+  color: #fff;
+  bottom: 12px;
+  position: absolute;
+  left: 30%;
+}
+
+.UnTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ee6e5d;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 5%;
+}
+
+.Menus h1 {
+  color: #471f36;
+}
+
+.Menus .CardMenus {
+  padding-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20%;
+}
+
+.Menus .CardMenus img {
+  width: 450px;
+  height: 300px;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.993) 0px 1px 2px 0px, rgba(255, 255, 255, 0.678) 0px 2px 6px 2px;
+          box-shadow: rgba(255, 255, 255, 0.993) 0px 1px 2px 0px, rgba(255, 255, 255, 0.678) 0px 2px 6px 2px;
+}
+
+.QSN {
+  padding-top: 5rem;
+}
+
+.QSN h1 {
+  padding-bottom: 2rem;
+}
+
+.QSN .Hamburger {
+  position: absolute;
+  right: -160px;
+  top: 1300px;
+  z-index: 0;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.QSN .Soda {
+  position: absolute;
+  z-index: 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  left: -160px;
+  bottom: -1300px;
+}
+
+.QSN p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f9a971;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  margin: 50px auto;
+  max-width: 80%;
+  letter-spacing: 1px;
+  line-height: 40px;
+  z-index: 5;
+}
+
+.QSN .cadre {
+  padding: 5% 5% 5% 7%;
+  border: 2px solid white;
+  border-radius: 18px;
+}
+
+.Equipe .equipe_section_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 0 0 24px;
+  z-index: 2;
+  padding-top: 5rem;
+}
+
+.Equipe .cardteam__container {
+  max-width: 257px;
+  width: 100%;
+  padding: 0 0 24px;
+}
+
+.Equipe .cardteam_img {
+  height: 235px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #fff;
+}
+
+.Equipe .cardteam_info {
+  padding: 12px 0 0;
+}
+
+.Equipe .cardteam_info h4 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 26px;
+  margin: 0;
+}
+
+.Equipe .cardteam_info h5 {
+  color: #f9a971;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.Localisation .container_map {
+  padding: 5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Localisation iframe {
+  border-radius: 12px;
+}
+
+.container_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 54px;
+  background-color: #0a0b0b;
+  color: #fff;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 54px;
+  background-color: #010000;
+  color: #fff;
+}
+/*# sourceMappingURL=styles.css.map */
